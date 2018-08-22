@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="sign_in">Sign in</string>
+    <string name="user_name">Username</string>
+    <string name="or_sign_up">Or Sign up</string>
+    <string name="password">Password</string>
+    <string name="please_enter_your_usename">Please enter your username</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="user_name_not_found">User with username %1$s was not found, please sign up.</string>
+    <string name="not_correct_password">Incorrect password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="please_confirm_your_password">Please confirm your password</string>
+    <string name="the_passwords_doesnt_match">The passwords doesnt match</string>
+    <string name="credentials_saved">Credentials saved</string>
+    <string name="shared_preferences">com.koleber.android.weatherapp</string>
+</resources>
