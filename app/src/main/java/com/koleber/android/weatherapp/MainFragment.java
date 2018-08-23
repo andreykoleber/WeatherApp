@@ -53,7 +53,7 @@ public class MainFragment extends Fragment {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "ONE");
+        adapter.addFragment(SearchWeatherFragment.newInstance(), "ONE");
         adapter.addFragment(new OneFragment(), "TWO");
         adapter.addFragment(new OneFragment(), "THREE");
         viewPager.setAdapter(adapter);

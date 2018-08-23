@@ -14,4 +14,12 @@
     <string name="the_passwords_doesnt_match">The passwords doesnt match</string>
     <string name="credentials_saved">Credentials saved</string>
     <string name="shared_preferences">com.koleber.android.weatherapp</string>
+    <string name="enter_city">Enter city</string>
+    <string name="city">City</string>
+    <string name="whats_the_weather">What\'s the weather?</string>
+    <string name="api_call">http://api.openweathermap.org/data/2.5/weather?q=%1$s</string>
+    <string name="api_key">&appid=b5cd0fd79808f0da4fde8b0ce9eeae7d</string>
+
+
+
 </resources>

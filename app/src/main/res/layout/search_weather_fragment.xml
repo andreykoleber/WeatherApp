@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_background"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txvEnterCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/enter_city"
+        android:textAlignment="center"
+        android:textColor="#f7f7f7"
+        android:textSize="42sp" />
+
+    <EditText
+        android:id="@+id/edtCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/city"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#f7f7f7"
+        android:textColorHint="#f7f7f7"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/btnSearchWeather"
+        style="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/whats_the_weather" />
+
+</LinearLayout>
