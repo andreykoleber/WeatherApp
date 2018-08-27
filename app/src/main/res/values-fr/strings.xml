@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="user_name">Nom d\'utilisateur</string>
+    <string name="or_sign_up">Or Sign up</string>
+    <string name="password">Ou s\'inscrire</string>
+    <string name="please_enter_your_usename">s\'il vous plaît entrez votre nom d\'utilisateur</string>
+    <string name="please_enter_your_password">s\'il vous plait entrez votre mot de passe</string>
+    <string name="user_name_not_found">Utilisateur avec identifiant %1$s n\'a pas été trouvé, veuillez vous inscrire.</string>
+    <string name="not_correct_password">Mot de passe incorrect</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Confirmez le mot de passe</string>
+    <string name="please_confirm_your_password">Veuillez confirmer votre mot de passe</string>
+    <string name="the_passwords_doesnt_match">Les mots de passe ne correspondent pas</string>
+    <string name="credentials_saved">Informations d\'identification enregistrées</string>
+    <string name="shared_preferences">com.koleber.android.weatherapp</string>
+    <string name="enter_city">Entrez la ville</string>
+    <string name="city">City</string>
+    <string name="whats_the_weather">Quel est le temps?</string>
+    <string name="api_call">http://api.openweathermap.org/data/2.5/weather?q=%1$s&amp;appid=b5cd0fd79808f0da4fde8b0ce9eeae7d</string>
+    <string name="monday">Lundi</string>
+    <string name="tuesday">Mardi</string>
+    <string name="wednesday">Mercredi</string>
+    <string name="thursday">Jeudi</string>
+    <string name="friday">Vendredi</string>
+    <string name="saturday">samedi</string>
+    <string name="sunday">Dimanche</string>
+    <string name="city_name">Nom de Ville:</string>
+    <string name="date">Rendez-vous amoureux:</string>
+    <string name="day">Journée:</string>
+    <string name="temperature">Température ℃:</string>
+    <string name="cloudy">Couverture nuageuse %:</string>
+    <string name="humidity">Humidité dans %:</string>
+    <string name="title_activity_maps">Carte</string>
+    <string name="your_current_location">ta location actuelle</string>
+    <string name="your_are_here">Tu es là</string>
+</resources>

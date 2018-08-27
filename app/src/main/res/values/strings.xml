@@ -17,9 +17,21 @@
     <string name="enter_city">Enter city</string>
     <string name="city">City</string>
     <string name="whats_the_weather">What\'s the weather?</string>
-    <string name="api_call">http://api.openweathermap.org/data/2.5/weather?q=%1$s</string>
-    <string name="api_key">&appid=b5cd0fd79808f0da4fde8b0ce9eeae7d</string>
-
-
-
+    <string name="api_call">http://api.openweathermap.org/data/2.5/weather?q=%1$s&amp;appid=b5cd0fd79808f0da4fde8b0ce9eeae7d</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="city_name">City name:</string>
+    <string name="date">Date:</string>
+    <string name="day">Day:</string>
+    <string name="temperature">Temperature ℃:</string>
+    <string name="cloudy">Cloud cover in %:</string>
+    <string name="humidity">Humidity in %:</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="your_current_location">Your current location</string>
+    <string name="your_are_here">You are here</string>
 </resources>

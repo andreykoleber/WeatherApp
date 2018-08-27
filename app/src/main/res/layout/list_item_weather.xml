@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/weather_item"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:id="@+id/llLabelContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txvCityNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/city_name"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txvDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/date"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txvDayOfTheWeekLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/day"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txvTemperatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/temperature"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txvCloudCoverLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cloudy"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txvHumidityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/humidity"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txvCityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp"
+            tools:text="Москва" />
+
+        <TextView
+            android:id="@+id/txvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp"
+            tools:text="17.01.2018" />
+
+        <TextView
+            android:id="@+id/txvDayOfTheWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp"
+            tools:text="Monday" />
+
+        <TextView
+            android:id="@+id/txvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp"
+            tools:text="17 grad" />
+
+        <TextView
+            android:id="@+id/txvCloudCover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp"
+            tools:text="Cloudy" />
+
+        <TextView
+            android:id="@+id/txvHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/whiteSomke"
+            android:textSize="20sp"
+            tools:text="Wet" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

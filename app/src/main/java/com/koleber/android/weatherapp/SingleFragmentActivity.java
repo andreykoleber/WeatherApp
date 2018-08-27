@@ -54,14 +54,6 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
                 break;
         }
         ft.replace(R.id.fragmentContainer, fragment);
-        ft.addToBackStack(null);
         ft.commit();
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
     }
 }

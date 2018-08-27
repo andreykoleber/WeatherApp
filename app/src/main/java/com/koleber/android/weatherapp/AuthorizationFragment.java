@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class AuthorizationFragment extends Fragment {
@@ -32,16 +35,23 @@ public class AuthorizationFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.authorization_fragment, container, false);
 
-
         final EditText edtUserName = view.findViewById(R.id.edtUserName);
 
         final EditText edtPassword = view.findViewById(R.id.edtPassword);
 
+        LinearLayout llContainer = view.findViewById(R.id.llContainer);
+        llContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hideKeyboard();
+            }
+        });
 
         Button btnSignIn = view.findViewById(R.id.btnSignIn);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                hideKeyboard();
                 String userName = edtUserName.getText().toString();
                 if (userName.equals("")) {
                     Toast.makeText(getActivity(), getString(R.string.please_enter_your_usename), Toast.LENGTH_LONG).show();
@@ -63,11 +73,25 @@ public class AuthorizationFragment extends Fragment {
         btnOrSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                hideKeyboard();
                 replaceFragment(SignUpFragment.newInstance(), AnimationMode.Next);
             }
         });
 
         return view;
+    }
+
+    private void hideKeyboard() {
+        FragmentActivity activity = getActivity();
+        if (activity != null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (inputMethodManager != null) {
+                View currentFocus = getActivity().getCurrentFocus();
+                if (currentFocus != null) {
+                    inputMethodManager.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
+                }
+            }
+        }
     }
 
     public void replaceFragment(Fragment fragment, AnimationMode animationMode) {
@@ -103,6 +127,4 @@ public class AuthorizationFragment extends Fragment {
             mSharedPreferences = getActivity().getSharedPreferences(getString(R.string.shared_preferences), Context.MODE_PRIVATE);
         }
     }
-
-
 }

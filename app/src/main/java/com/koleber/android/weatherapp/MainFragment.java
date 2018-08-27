@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainFragment extends Fragment {
-
-    private Toolbar toolbar;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
 
     public static MainFragment newInstance() {
 
@@ -36,32 +33,33 @@ public class MainFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.main_fragment, container, false);
 
-        toolbar = view.findViewById(R.id.toolbar);
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
 
-        ((WeatherActivity) getActivity()).setSupportActionBar(toolbar);
+        WeatherActivity weatherActivity = ((WeatherActivity) getActivity());
+        if (weatherActivity != null) {
+            weatherActivity.setSupportActionBar(toolbar);
+            ActionBar supportActionBar = weatherActivity.getSupportActionBar();
+            if (supportActionBar != null) {
+                supportActionBar.setDisplayHomeAsUpEnabled(true);
+            }
+        }
 
-        ((WeatherActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        adapter.addFragment(SearchWeatherFragment.newInstance(), "1");
+        adapter.addFragment(StoredWeather.newInstance(), "2");
+        adapter.addFragment(GoogleMapsFragment.newInstance(), "3");
 
-        viewPager = view.findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
+        ViewPager viewPager = view.findViewById(R.id.viewpager);
+        viewPager.setAdapter(adapter);
 
-        tabLayout = view.findViewById(R.id.tabs);
+        TabLayout tabLayout = view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
         return view;
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
-        adapter.addFragment(SearchWeatherFragment.newInstance(), "ONE");
-        adapter.addFragment(new OneFragment(), "TWO");
-        adapter.addFragment(new OneFragment(), "THREE");
-        viewPager.setAdapter(adapter);
-    }
 
-
-
-    class ViewPagerAdapter extends FragmentPagerAdapter {
+    private class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
